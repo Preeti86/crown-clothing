@@ -1,6 +1,6 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-E-commerce app with Redux, Hooks, GraphQL, ContextAPI, Stripe, Firebase
+E-commerce app with Redux, Hooks, GraphQL, ContextAPI, Stripe, Firebase, style compenents, responsive layout.
 
 ## Available Scripts
 
