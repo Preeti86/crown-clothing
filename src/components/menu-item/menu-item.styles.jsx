@@ -1,4 +1,7 @@
-.menu-item {
+import styled from 'styled-components';
+
+export const MenuItemContainer = styled.div`
+  height: ${({ size }) => (size ? '380px' : '240px')};
   min-width: 30%;
   height: 240px;
   flex: 1 1 auto;
@@ -8,6 +11,7 @@
   border: 1px solid black;
   margin: 0 7.5px 15px;
   overflow: hidden;
+
   &:hover {
     cursor: pointer;
 
@@ -21,11 +25,6 @@
     }
   }
 
-
-  &.large {
-    height: 380px;
-  }
-
   &:first-child {
     margin-right: 7.5px;
   }
@@ -34,14 +33,20 @@
     margin-left: 7.5px;
   }
 
-  .background-image {
-    width: 100%;
-    height: 100%;
-    background-size: cover;
-    background-position: center;
+  @media screen and (max-width: 800px) {
+    height: 200px;
   }
+`;
+  
+export const BackgroundImageContainer = styled.div`
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  background-image: ${({ imageUrl }) => `url(${imageUrl})`};
+`;
 
-  .content {
+  export const ContentContainer = styled.div`
     height: 90px;
     padding: 0 25px;
     display: flex;
@@ -52,18 +57,16 @@
     background-color: white;
     opacity: 0.7;
     position: absolute;
+  `;
 
-
-    .title {
+  export const ContentTitle = styled.span`
       font-weight: bold;
       margin-bottom: 6px;
       font-size: 22px;
       color: #4a4a4a;
-    }
+  `;
 
-    .subtitle {
+  export const ContentSubtitle = styled.span`
       font-weight: lighter;
       font-size: 16px;
-    }
-  }
-}
+   `;
