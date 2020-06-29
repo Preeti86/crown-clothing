@@ -6,8 +6,10 @@ import HomePage from './pages/Homepage/HomePage.component';
 import shopPage from './pages/shop/shop.component'; 
 
 import SignInAndSignUpPage from './pages/sign-in-and-sign-out/sign-in-and-sign-out.component';
-import { auth, createUserProfileDocument } from './firebase/firebase.utils';
+import CheckoutPage from './pages/checkout/checkout.component';
 
+
+import { auth, createUserProfileDocument } from './firebase/firebase.utils';
 import Header from './components/header/header.component';
 
 import { GlobalStyle } from './global.styles';
@@ -47,6 +49,7 @@ class App extends React.Component{
           <Switch>
             <Route exact path='/' component={HomePage}/>
             <Route path='/shop' component={shopPage}/>
+            <Route exact path='/checkout' component={CheckoutPage}/>
             <Route 
               exact 
               path='/signin' 
