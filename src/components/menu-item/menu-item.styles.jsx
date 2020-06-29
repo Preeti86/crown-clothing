@@ -25,6 +25,10 @@ export const MenuItemContainer = styled.div`
     }
   }
 
+  &.large {
+    height: 380px;
+  }
+
   &:first-child {
     margin-right: 7.5px;
   }
