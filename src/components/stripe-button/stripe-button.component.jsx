@@ -7,7 +7,7 @@ const StripeCheckButton = ({ price }) => {
 
     const onToken = token => {
         console.log(token);
-        alert('Payment successful')
+        alert('Payment Succesful!')
     }
 
     return (
@@ -17,7 +17,8 @@ const StripeCheckButton = ({ price }) => {
             billingAddress
             shippingAddress
             image='https://svgshare.com/i/CUz.svg'
-            description={priveForStripe}
+            description={`Yout total is ${price}`}
+            amount={priceForStripe}
             panelLabel='Pay Now'
             token={onToken}
             stripeKey={publishableKey}
